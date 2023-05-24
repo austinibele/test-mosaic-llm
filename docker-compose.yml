@@ -1,0 +1,12 @@
+version: "2.4"
+
+services:
+  llm:
+    image: llm
+    build:
+      context: .
+      dockerfile: services/llm/Dockerfile      
+    env_file:
+      - .env
+    volumes:
+      - .:/workspace
